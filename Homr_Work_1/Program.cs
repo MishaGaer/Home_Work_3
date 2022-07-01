@@ -42,7 +42,7 @@ int GetNumber(string message)
 
     return result;
 }
-
+//метод проверки на полиндром
 void CheckNumber(int value)
 {
     int reverse = 0;
@@ -68,3 +68,95 @@ void CheckNumber(int value)
 
 int palindrome = GetNumber("Введите пятизначное число");
 CheckNumber(palindrome);
+
+/*
+//метод проверки числа
+char[] GetNumber(string message)
+{
+    while (true)
+    {
+        Console.WriteLine(message);
+        string messageStr = Console.ReadLine();
+
+        if (int.TryParse(messageStr, out int number))
+        {
+            if (number > 9999 && number < 100000)
+            {
+                char[] message2 = messageStr.ToCharArray();
+                return message2;
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("Вы ввели не верное число.Число должно быть пятизначным!");
+            }
+
+        }
+        else
+        {
+            Console.Clear();
+            Console.WriteLine("Вы ввели не число. Введите корректное число.");
+        }
+
+    }
+}
+
+//Метод проверки на полиндром
+
+string CheckNumber(char[] value)
+{
+    int length = value.Length;
+    string otvet = " ";
+  
+    for (int i =  0; i<length; i++)
+    {
+    if (value[i] == value[length-1-i])
+    {
+        otvet = "Введенное число является полиндромом!";
+    }
+        else
+        {
+            otvet = "Введенное число не является полиндромом!";
+            break;
+        }
+    }
+    Console.WriteLine(otvet);
+    return otvet;
+}
+
+//Основной
+
+char[] massage = GetNumber("Введите пятизначное число");
+CheckNumber(massage);
+*/
+/*
+//метод считывания массива чаров
+string CheckNumber(char[] value)
+{
+    int length = value.Length;
+    string otvet = " ";
+  
+    for (int i =  0; i<length; i++)
+    {
+    if (value[i] == value[length-1-i])
+    {
+        otvet = "Введенное слово или число является полиндромом!";
+    }
+        else
+        {
+            otvet = "Введенное слово или число НЕ является полиндромом!";
+            break;
+        }
+    }
+    Console.WriteLine(otvet);
+    return otvet;
+}
+
+//Основной
+
+Console.WriteLine("Введите слово или число");
+
+string messageStr = Console.ReadLine();
+char[] message2 = messageStr.ToCharArray();
+CheckNumber(message2);
+*/
