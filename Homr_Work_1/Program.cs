@@ -14,7 +14,6 @@
 //метод проверки введенного числа
 int GetNumber(string message)
 {
-    int result = 0;
     while (true)
     {
         Console.WriteLine(message);
@@ -39,8 +38,6 @@ int GetNumber(string message)
         }
 
     }
-
-    return result;
 }
 //метод проверки на полиндром
 void CheckNumber(int value)
@@ -129,8 +126,9 @@ string CheckNumber(char[] value)
 char[] massage = GetNumber("Введите пятизначное число");
 CheckNumber(massage);
 */
+
 /*
-//метод считывания массива чаров
+//метод проверки массива чаров
 string CheckNumber(char[] value)
 {
     int length = value.Length;
